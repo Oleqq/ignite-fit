@@ -1,0 +1,191 @@
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #fff;
+
+    &__wrapper {
+        display: flex;
+        gap: 34px;
+    }
+    
+    &__gallery {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    &__image-main {
+        border-radius: 6px;
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+    }
+    
+    &__thumbnails {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+
+        &__thumbnail {
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+    
+    &__details {
+        flex: 1;
+        
+
+        .product__title {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 45px;
+            color: #191415;
+            line-height: normal;
+            margin-bottom: 16px;
+        }
+
+        .product__description {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .product__features {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+            
+            justify-content: center;
+
+            .product__feature {
+                font-size: 14px;
+                background-color: #f7f7f7;
+                padding: 5px 10px;
+                border-radius: 4px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .product__price {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 69%;
+            color: #191415;
+
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .product__actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .product__quantity {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .product__quantity-label {
+                    font-family: var(--font-family);
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 125%;
+                    color: #191415;
+                }
+
+                .product__quantity-input {
+                    width: 50px;
+                    padding: 5px;
+                    font-size: 16px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                }
+            }
+
+            .product__btn {
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: bold;
+
+                .product--add-to-cart {
+                    background-color: #ff4a4a;
+                    color: white;
+                }
+
+                .product--buy-now {
+                    background-color: #ff8000;
+                    color: white;
+                }
+            }
+        }
+
+        .product__delivery-info, .product__checkout-security {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+
+    &__extra-info {
+        margin-top: 20px;
+        flex-basis: 100%;
+
+        &__info-section {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+
+            &__info-title {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            &__info-text {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+        }
+
+        &__accordion {
+            margin-bottom: 10px;
+
+            &__accordion-toggle {
+                width: 100%;
+                background-color: #f0f0f0;
+                padding: 10px;
+                border: none;
+                text-align: left;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 4px;
+                margin-bottom: 5px;
+            }
+
+            &__accordion-content {
+                padding: 10px;
+                background-color: #fafafa;
+                border: 1px solid #ddd;
+                font-size: 14px;
+                display: none; // JavaScript can be used to toggle this
+            }
+        }
+    }
+}
