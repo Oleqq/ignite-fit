@@ -1,0 +1,70 @@
+// faq
+.faq {
+    background: #f7f7f6;
+    position: relative;
+
+    padding: 58px 0 94px;
+
+    // custom
+    .accordion__item {
+        padding: 12px 25px;
+        box-shadow: 0 20px 60px 0 rgba(52, 64, 84, 0.02);
+background: #fff;
+    }
+    .accordion__item i {
+        margin-top: 7px;
+    }
+    // custom end
+
+    &-bg-dc {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: 1;
+
+        @media (max-width:467px) {
+            display: none;
+        }
+
+            svg {
+                height: 100%;
+                width: 85%;
+            }
+        
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        justify-content: space-between;
+        gap: 48px;
+
+        @media (max-width:1199px) {
+            flex-direction: column;
+        }
+    }
+    h3 {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 55px;
+        color: #191415;
+        line-height: normal;
+
+        @media (max-width:1440px) {
+            font-size: 44px;
+        }
+        @media (max-widtH:1199px) {
+            br {
+                display: none;
+                
+            }
+            text-align: center;
+        }
+
+        b {
+            font-weight: 700;
+        }
+    }
+}
