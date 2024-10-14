@@ -414,9 +414,10 @@
         font-size: 16px;
         line-height: 174%;
         color: #000;
+        max-width: 90%;
 
         @media (max-width:567px) {
-            font-size: 13px;
+            font-size: 16px;
         }
     }
 
@@ -487,7 +488,7 @@
     color: #191415;
 
     @media (max-width:567px) {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     p {
