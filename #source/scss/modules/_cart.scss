@@ -32,12 +32,33 @@
       background-color: #f7f7f6;
       border-bottom: 1px solid #e7e5dc;
 
-      padding: 16px 67px 18px 30px;
+      padding: 16px 86px 18px 30px;
+
+      @media (max-width:1440px) {
+        padding-right: 42px;
+      }
+      @media (max-width:991px) {
+        padding: 16px 24px 18px 24px;
+      }
+      @media (max-width:567px) {
+        padding: 16px 12px 18px 12px;
+      }
+
     }
 
     &__body {
         background-color: #f7f7f6;
         padding: 24px 86px 42px 30px;
+
+        @media (max-width:1440px) {
+          padding-right: 42px;
+        }
+        @media (max-width:991px) {
+          padding: 24px 24px 42px 24px;
+        }
+        @media (max-width:567px) {
+          padding: 24px 12px 24px 12px;
+        }
     }
 
     &__column {
@@ -48,7 +69,20 @@
       font-size: 14px;
       line-height: 150%;
       color: #191415;
+
+      @media (max-width:1440px) {
+        display: flex;
+      align-items: flex-start;
+      justify-content: center;
   
+      }
+
+      &.center {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+      
       &:first-child {
         text-align: left;
       }
@@ -59,29 +93,49 @@
     }
   
     &__image {
-      width: 113px;
+      width: 100%;
       border-radius: 6px;
       height: auto;
+      object-fit: cover;
     }
   
     &__quantity {
       display: flex;
       align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 55%;
   
       &-btn {
-        background: #f5f5f5;
-        border: 1px solid #ddd;
+        background: #fff;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
         width: 30px;
-        height: 30px;
+        height: 33px;
         text-align: center;
         line-height: 30px;
         cursor: pointer;
+
+
+        &--plus {
+          position: absolute;
+          right: 0;
+          border-right: 1px solid #ddd;
+        }
+        &--minus {
+          position: absolute;
+          left: 0;
+          border-left: 1px solid #ddd;
+        }
       }
   
       &-input {
         width: 50px;
         text-align: center;
         border: 1px solid #ddd;
+
+        background-color: #fff;
+        padding: 8px;
       }
     }
   
@@ -200,6 +254,13 @@
   
       &:hover {
         background-color: #c7432d;
+      }
+
+      @media (max-width:567px) {
+        font-size: 16px;
+      }
+      @media (max-width:390px) {
+        font-size: 14px;
       }
     }
   

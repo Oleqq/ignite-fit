@@ -77,6 +77,15 @@
         // justify-content: space-between;
         align-items: center;
         gap: 10vw;
+        @media (max-width:1440px) {
+            gap: 2vw;
+        }
+        @media (max-width:991px) {
+            padding: 34px 20px 28px;
+        }
+        @media (max-width:767px) {
+            flex-direction: column;
+        }
     }
     &__text {
         width: 100%;
@@ -89,6 +98,10 @@
         color: #191415;
 
         margin-bottom: 16px;
+
+        @media (max-width:567px) {
+            font-size: 24px;
+        }
     }
     &__subtitle {
         font-family: var(--font-family);
@@ -137,6 +150,13 @@
             border-radius: 8px;
             top: 20%;
             right: 8px;
+
+            @media (max-width:390px) {
+                position: unset;
+                width: 100%;
+                padding: 14px 24px;
+                margin-top: 16px;
+            }
         }
     }
 }
